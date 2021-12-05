@@ -1,0 +1,166 @@
+{
+    "cards": {
+        "primaryCard": {
+            "bank": "testcash",
+            "type": "premium account",
+            "name": "Ted Barney",
+            "number": "5698 **** **** 2842",
+            "expiry": "06/21",
+            "ccv": 928,
+            "active": true
+        },
+        "expense": {
+            "current": 350.60,
+            "limit": 4000
+        },
+        "balance": {
+            "current": 2850.75,
+            "credit": 1500.50,
+            "provisions": 350.60
+        }
+    },
+    "billing": [
+        {
+            "service": "Monitoring",
+            "type": "session",
+            "date": 1629197711,
+            "amount": 75.67
+        },
+        {
+            "service": "Exams",
+            "type": "session",
+            "date": 1629197711,
+            "amount": 75.67
+        },
+        {
+            "service": "Exams",
+            "type": "storage",
+            "date": 1629197711,
+            "amount": 75.67
+        },
+        {
+            "service": "Application Library",
+            "type": "month",
+            "date": 1629197711,
+            "amount": 75.67
+        },
+        {
+            "service": "Monitoring",
+            "type": "bandwidth",
+            "date": 1629197711,
+            "amount": 75.67
+        },
+        {
+            "service": "Application Library",
+            "type": "bandwidth",
+            "date": 1629197711,
+            "amount": 85.62
+        },
+        {
+            "service": "Exams",
+            "type": "bandwidth",
+            "date": 1629197711,
+            "amount": 173.27
+        }
+    ],
+    "locations": [
+        {
+            "image": "https://lh3.googleusercontent.com/pw/AM-JKLUgTIqMRBLP2pKLmPhwwMn66gyLimAW6E7l-O2djXHmWl3Lk_7qDM2mtLvbTEDCynauHqayt7VCXotdr8PVDbZwXDW5GSeZrGQdqQVZHY__VvN6nQutx_oMqIWSNToD90JhttdpOAjZEkucHz9OC2Ti=w31-h23-no?authuser=0",
+            "licences": 350,
+            "name": "Atasehir",
+            "products": {
+                "monitoring": true,
+                "exams": true,
+                "applicationLibrary": true
+            },
+            "enrollmentDate": 1629198614
+        },
+        {
+            "image": "https://lh3.googleusercontent.com/pw/AM-JKLVHQdTFvdbpIhBdAdvhXLsKG4r4xRgyHmUOOua1eV8USPQRC4t_54XHQFoiHVpVHecr-QY5KTK-ua0A_Aj-sed4XwcOfDVEaSSs5jcATF74aNzmkCM9-RnR7Eqpe39mDxy08qy3GCJyEyhMuMJTh9XI=s24-no?authuser=0",
+            "licences": 350,
+            "name": "Sariyer",
+            "products": {
+                "monitoring": false,
+                "exams": true,
+                "applicationLibrary": true
+            },
+            "enrollmentDate": 1629198614
+        },
+        {
+            "image": "https://lh3.googleusercontent.com/pw/AM-JKLXOvVy6gdFEYg8PNWNm5nqkVMUTRlETmF_0uERYwi7lngUumdsPI1749B4oceIlmWzv4WKxO9uvwHbspGJ0n6BVJnIxeervxZ-sNMDRbfWWji4kJP7-YIgaU7fly22t06t4iwiiCLSlG2z6YnsegVqO=w31-h26-no?authuser=0",
+            "licences": 350,
+            "name": "Bakirkoy",
+            "products": {
+                "monitoring": true,
+                "exams": true,
+                "applicationLibrary": true
+            },
+            "enrollmentDate": 1629198614
+        },
+        {
+            "image": "https://lh3.googleusercontent.com/pw/AM-JKLVGbbLxQeQo_Dazvn_hWuWhImR_ns_GZH_eU_BkHsps-OTiq4qeQQDW1rWpXC1hV8B1wO9kFxZa5XA8x0XKTnIFu3bXl_WxG5nEjV5-YDxZaYuFzpGb6WWnsDZGcmZ7eOVIuOEPw_820ONx_g-i-GvK=w31-h23-no?authuser=0",
+            "licences": 350,
+            "name": "Besiktas",
+            "products": {
+                "monitoring": true,
+                "exams": true,
+                "applicationLibrary": false
+            },
+            "enrollmentDate": 1629198614
+        },
+        {
+            "image": "https://lh3.googleusercontent.com/pw/AM-JKLWaEOOeJM9tVSsrOJBERke4IakaYTjtjuTZYsHQlqRfBJMFCfBkOCe00jZJNYbzMzjvBkoZ2_jJ9hFrWsSf8k9-advXf1MfnTnRpuu-KfsnqUhEzyyW5Bh0lonKBuk0TlhkYmPcXa-CC1q1QD2_pc1V=s24-no?authuser=0",
+            "licences": 350,
+            "name": "Kadikoy",
+            "products": {
+                "monitoring": true,
+                "exams": true,
+                "applicationLibrary": true
+            },
+            "enrollmentDate": 1629198614
+        },
+        {
+            "image": "https://lh3.googleusercontent.com/pw/AM-JKLU7h0rjOOsLE4nHg-suge0V9XU5DWQwfkF-GyLNzQu6H_EUHTyzmkshdUGsJhHJdM7d2DJ63CRP1QHba73KD_5yDeY2DYcKyfm3J777peRTfxBfvCiTxpTGBxBozfJixVTZIOoGc0un-aOgN8vf15nV=w31-h26-no?authuser=0",
+            "licences": 350,
+            "name": "Maslak",
+            "products": {
+                "monitoring": false,
+                "exams": false,
+                "applicationLibrary": true
+            },
+            "enrollmentDate": 1629198614
+        }
+    ],
+    "usage": {
+        "exams": 70304,
+        "monitoring": 44616,
+        "applicationLibrary": 20280
+    },
+    "administrators": [
+        {
+            "image": "https://images.pexels.com/photos/9725528/pexels-photo-9725528.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+            "name": "Ivana"
+        },
+        {
+            "image": "https://images.pexels.com/photos/5584006/pexels-photo-5584006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "name": "Bob"
+        },
+        {
+            "image": "https://images.pexels.com/photos/8485881/pexels-photo-8485881.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "name": "Lily"
+        },
+        {
+            "image": "https://images.pexels.com/photos/8204315/pexels-photo-8204315.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "name": "Natalia"
+        },
+        {
+            "image": "https://images.pexels.com/photos/9324410/pexels-photo-9324410.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "name": "Mark"
+        },
+        {
+            "image": "https://images.pexels.com/photos/9136250/pexels-photo-9136250.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "name": "Robin"
+        }
+    ],
+    "upload": []
+}

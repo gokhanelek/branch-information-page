@@ -1,0 +1,23 @@
+<div class="locations-container">
+    <div class="location-header">
+        <span class="title skin">Locations</span>
+        <a [routerLink]="['/location-create']" routerLinkActive="router-link-active">
+            <mat-icon svgIcon='plus-circle' class="mat-icon custom-icon">
+            </mat-icon>
+        </a>
+    </div>
+    <div class="list">
+        <ng-container *ngFor="let location of locations$ |async">
+            <div class="location">
+                <div class="licences">
+                    <span class="license-numbers">{{location.licences}}</span>
+                    <span class="label-licences skin">Licences</span>
+                </div>
+                <div class="district">
+                    <img [src]="location.image" alt="Location image">
+                    <span class="location-name skin">{{location.name}}</span>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

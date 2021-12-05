@@ -1,0 +1,237 @@
+.sidenav-container {
+  height: 100%;
+  background: linear-gradient(121.32deg, #ffffff 10.96%, #ffffff 72%, #ffffff 99.98%);
+  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 60px;
+
+  .sidenav {
+    width: 10%;
+    min-width: 200px;
+    height: 900px;
+    border-bottom-left-radius: 60px;
+
+    .sidenav-logo {
+      display: flex;
+      justify-content: center;
+      margin-top: 37px;
+      margin-bottom: 80px;
+    }
+
+    .navigation-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .navigation-item {
+        width: 180px;
+        height: 40px;
+        margin: auto;
+
+        &:active,
+        &:hover {
+          background: #f0f7ff;
+          border-radius: 4px;
+          color: #197bbd;
+
+          .custom-icon {
+            svg {
+              path {
+                stroke: #197bbd !important;
+              }
+            }
+          }
+        }
+
+        .menu-list-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 40px;
+          font-family: var(--primary-font-family);
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 17px;
+          color: #c7c7c7;
+
+          .mat-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 23px;
+          }
+        }
+
+        .is-active {
+          color: #197bbd;
+          background: #f0f7ff;
+          border-radius: 4px;
+
+          .custom-icon {
+            svg {
+              path {
+                stroke: #197bbd !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sidenav-content {
+    width: 90%;
+    height: 900px;
+    padding: 0;
+
+    .toolbar {
+      width: 100%;
+      height: 120px;
+      padding: 0;
+      background-color: #fff;
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        width: 1251px;
+        height: 120px;
+        padding: 23px 50px;
+
+        .header-title {
+          display: flex;
+          flex-direction: column;
+
+          .title {
+            font-weight: 500;
+            font-size: 43.3726px;
+            line-height: 54px;
+
+            color: #404040;
+          }
+
+          .explanition {
+            font-weight: normal;
+            font-size: 16.0564px;
+            line-height: 20px;
+            color: #aeaeae;
+          }
+        }
+
+        .user {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .notification-group {
+            a {
+              margin-right: 20px;
+
+              .user-icon {
+                color: #e3e3e3;
+              }
+            }
+          }
+
+          .user-account {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            img {
+              width: 35px;
+              height: 35px;
+            }
+
+            .user-info {
+              display: flex;
+              flex-direction: column;
+
+              .user-name {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                color: #404040;
+              }
+
+              .user-type {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #aeaeae;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      width: 1251px;
+      height: 780px;
+    }
+
+    .mat-toolbar.mat-primary {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+  }
+}
+
+// TODO can add user info and logout nav-item-list
+
+@media (max-width: 480px) {
+  .sidenav-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+
+    .sidenav {
+      width: 50%;
+    }
+
+    .sidenav-content {
+      width: 100%;
+      height: 100%;
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        .header-container {
+          width: 100%;
+          height: 50px;
+          padding: 5px 10px;
+
+          .header-title {
+            margin: 0;
+
+            .title {
+              font-size: 18px;
+              line-height: 20px;
+            }
+
+            .explanition {
+              font-size: 14px;
+              white-space: nowrap;
+              width: 300px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+
+          .user {
+            display: none;
+          }
+        }
+      }
+
+      .content {
+        width: 100%;
+      }
+    }
+  }
+}

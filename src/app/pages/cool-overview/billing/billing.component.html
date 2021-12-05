@@ -1,0 +1,32 @@
+<div class="billing-container">
+    <div class="billing-header">
+        <span class="title skin">Billing summary</span>
+    </div>
+    <div class="billing-summary">
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th class="skin" [ngClass]="{'amount-th':column === 'Amount'}"
+                        *ngFor="let column  of displayedColumns">{{column}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let summary of billing$ | async">
+                    <td scope="row" class="service-td skin">
+                        <input class="form-check-input" type="checkbox" value="" id="summaryCheckbox">
+                        {{summary.service}}
+                    </td>
+                    <td scope="row" class="custom skin">
+                        $/{{summary.type}}
+                    </td>
+                    <td scope="row" class="custom skin">
+                        {{summary.date}}
+                    </td>
+                    <td scope="row" class="amount">
+                        {{summary.amount |currency}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

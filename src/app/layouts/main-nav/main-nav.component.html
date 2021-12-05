@@ -1,0 +1,61 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <div class="sidenav-logo">
+      <img src="./assets/images/side-main-nav/logo.svg" />
+    </div>
+    <mat-nav-list class="navigation-menu">
+      <mat-list-item class="navigation-item" *ngFor="let item of menu">
+        <a [routerLink]='item.route' routerLinkActive="router-link-active" class="menu-list-item"
+          routerLinkActive="is-active">
+          <mat-icon *ngIf="item.customIcon === true;else defaultIcon" svgIcon={{item.iconName}}
+            class="mat-icon custom-icon">
+          </mat-icon>
+          <ng-template #defaultIcon>
+            <mat-icon class="mat-icon">{{item.iconName}}</mat-icon>
+          </ng-template>
+          <span class="text">{{item.displayName}}</span>
+        </a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+    <mat-toolbar class="toolbar">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="header-container">
+        <div class="header-title">
+          <span class="skin title">{{pageTitle}}
+            <a [routerLink]="['/location-create']" routerLinkActive="router-link-active">
+              <mat-icon *ngIf="pageTitle ==='Locations'" svgIcon='plus-circle' class="mat-icon custom-icon">
+              </mat-icon>
+            </a>
+          </span>
+          <span class="skin explanition">{{pageExplanation}}</span>
+        </div>
+        <div class="user">
+          <div class="notification-group">
+            <a href="mailto: user@gmail.com">
+              <mat-icon class="user-icon"> email</mat-icon>
+            </a>
+            <a href="#">
+              <mat-icon class="user-icon">notifications</mat-icon>
+            </a>
+          </div>
+          <div class="user-account">
+            <img src="./assets/images/header/user-avatar-icon.svg" alt="user image" srcset="">
+            <div class="user-info">
+              <span class="skin user-name">Andrew</span>
+              <span class="skin user-type">Admin Account</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

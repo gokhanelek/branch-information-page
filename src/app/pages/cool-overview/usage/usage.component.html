@@ -1,0 +1,37 @@
+<div class="usage-container">
+    <div class="usage-header">
+        <span class="title skin">Module usage</span>
+    </div>
+    <div class="list">
+        <ng-container *ngIf="usage$ | async as usage">
+            <div class="report">
+                <img src="./assets/images/shared-img/exam-logo.png" alt="Exams logo">
+                <div class="usage-progress-bar">
+                    <mat-progress-bar class="exams-bar" mode="determinate" [value]="usage.exams">
+                    </mat-progress-bar>
+                    <span class="usage-progress-bar-label skin">Exams</span>
+                </div>
+                <span class="usage-percentage">{{usage.exams}}%</span>
+            </div>
+            <div class="report">
+                <img src="./assets/images/shared-img/monitoring-logo.png" alt="Monitoring logo">
+                <div class="usage-progress-bar">
+                    <mat-progress-bar class="monitoring-bar" mode="determinate" [value]="usage.monitoring">
+                    </mat-progress-bar>
+                    <span class="usage-progress-bar-label skin">Monitoring</span>
+                </div>
+                <span class="usage-percentage">{{usage.monitoring}}%</span>
+            </div>
+            <div class="report">
+                <img src="./assets/images/shared-img/application-library-logo.png" alt="Application library logo">
+                <div class="usage-progress-bar">
+                    <mat-progress-bar class="application-library-bar" mode="determinate"
+                        [value]="usage.applicationLibrary">
+                    </mat-progress-bar>
+                    <span class="usage-progress-bar-label skin">Application Library</span>
+                </div>
+                <span class="usage-percentage">{{usage.applicationLibrary}}%</span>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,241 @@
+.cards-container {
+  width: 600px;
+  height: 360px;
+  padding: 20px 30px;
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 28px;
+
+  .card-title {
+    h1 {
+      font-weight: 500;
+      font-size: 20.1118px;
+      line-height: 25px;
+    }
+  }
+
+  .row {
+    .card-section {
+      .overview-card {
+        width: 320.43px;
+        height: 206.17px;
+        padding: 20px;
+        margin-bottom: 31px;
+
+        background-image: url("../../../../assets/images/cards/card-background.png");
+        background-size: 100%;
+        background-size: cover;
+
+        .card-account-type {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 46px;
+
+          .bank-name {
+            font-weight: bold;
+            font-size: 16.7475px;
+            line-height: 21px;
+          }
+
+          .primarycard-type {
+            font-family: var(--primary-font-family);
+            font-weight: bold;
+            font-size: 8.11292px;
+            line-height: 10px;
+            color: rgba(255, 255, 255, 0.39);
+          }
+        }
+
+        .card-number {
+          font-weight: 500;
+          font-size: 21.4918px;
+          line-height: 27px;
+          margin-bottom: 32px;
+        }
+
+        .card-details {
+          display: flex;
+
+          .card-holder,
+          .expire-date {
+            display: flex;
+            flex-direction: column;
+
+            .detail-value {
+              font-family: var(--primary-font-family);
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12.6167px;
+              line-height: 15px;
+            }
+          }
+
+          .card-holder {
+            margin-right: 45px;
+          }
+        }
+      }
+      .expense-limit {
+        display: flex;
+        flex-direction: column;
+        width: 320.43px;
+        height: 206.17px;
+
+        .limit-bar {
+          margin-bottom: 20px;
+          height: 10px;
+          border-radius: 13px;
+        }
+
+        .expense-limit-detail {
+          display: flex;
+          justify-content: space-between;
+
+          .expense-limit-label {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+          }
+
+          .expense-limit-total {
+            font-family: var(--primary-font-family);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .payment-section {
+      .payment-details {
+        .payment-group {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          margin-bottom: 20px;
+
+          .payment-label {
+            margin-top: 2px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #aeaeae;
+          }
+
+          .currency-balance-total {
+            font-family: var(--primary-font-family);
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: #197bbd;
+          }
+
+          .available-credit-total {
+            font-family: var(--primary-font-family);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: #439a86;
+          }
+
+          .awaiting-provisions-total {
+            font-family: var(--primary-font-family);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: #bb4430;
+          }
+        }
+
+        .deactive-toggle {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          margin-top: 32px;
+
+          .toggle {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+
+            input {
+              display: none;
+              &:checked + .slider {
+                background-color: #197bbd;
+
+                &:before {
+                  transform: translateX(26px);
+                }
+              }
+            }
+
+            .slider {
+              background: #ebebeb;
+              bottom: 0;
+              cursor: pointer;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              transition: 0.4s;
+
+              &::before {
+                background-color: #cdcdcd;
+                bottom: 4px;
+                content: "";
+                height: 26px;
+                left: 4px;
+                position: absolute;
+                transition: 0.4s;
+                width: 26px;
+              }
+            }
+
+            .round {
+              border-radius: 34px;
+
+              &::before {
+                border-radius: 50%;
+              }
+            }
+          }
+
+          span {
+            margin-top: 10px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #aeaeae;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    width: 100%;
+    height: auto;
+
+    .row {
+      .card-section {
+        .overview-card {
+          height: auto !important;
+        }
+
+        .expense-limit {
+          height: auto !important;
+        }
+      }
+      .payment-section {
+        margin-top: 10px;
+      }
+    }
+  }
+}

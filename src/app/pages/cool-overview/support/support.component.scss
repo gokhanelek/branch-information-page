@@ -1,0 +1,56 @@
+.support-container {
+    width: 158px;
+    height: 183px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    button {
+        display: flex;
+        align-items: end;
+        width: 158px;
+        height: 180px;
+        background-image: url("../../../../assets/images/support/support-button.png");
+        border-radius: 19.0044px;
+        border: none;
+
+        span {
+            width: 77px;
+            height: 50px;
+            margin-left: 15px;
+            font-weight: 500;
+            font-size: 20.1118px;
+            line-height: 25px;
+            color: #fff;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .mat-icon {
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .support-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+
+        button {
+            align-items: center;
+            width: 60%;
+            height: 40px;
+            background: linear-gradient(180deg, #ed654c 0%, #d05842 100%);
+
+            span {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

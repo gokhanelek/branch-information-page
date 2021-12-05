@@ -1,0 +1,108 @@
+.usage-container {
+    width: 531px;
+    height: 260px;
+    margin-bottom: 10px;
+
+    .usage-header {
+        .title {
+            font-weight: 500;
+            font-size: 20.1118px;
+            line-height: 25px;
+            color: #404040;
+        }
+    }
+    .list {
+        margin-top: 25px;
+
+        .report {
+            display: flex;
+            justify-items: center;
+            width: 506px;
+            height: 50px;
+
+            img {
+                width: 45px;
+                height: 45px;
+                margin-top: 7px;
+            }
+
+            .usage-progress-bar {
+                width: 368px;
+                height: 35px;
+                margin-top: 11px;
+
+                .usage-progress-bar-label {
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #aeaeae;
+                }
+
+                .exams-bar {
+                    width: 100%;
+                    height: 10px;
+                    background: #f1f1f1;
+                    border-radius: 14px;
+
+                    .mat-progress-bar-fill::after {
+                        background: linear-gradient(270deg, #fcae73 0%, #f79042 99.18%);
+                        border-radius: 11px;
+                    }
+                }
+
+                .monitoring-bar {
+                    width: 100%;
+                    height: 10px;
+                    background: #f1f1f1;
+                    border-radius: 14px;
+
+                    .mat-progress-bar-fill::after {
+                        background: linear-gradient(90deg, #209d43 0%, #2bc255 100%);
+                        border-radius: 11px;
+                    }
+                }
+
+                .application-library-bar {
+                    width: 100%;
+                    height: 10px;
+                    background: #f1f1f1;
+                    border-radius: 14px;
+
+                    .mat-progress-bar-fill::after {
+                        background: #70a6e8;
+                        border-radius: 11px;
+                    }
+                }
+            }
+
+            .usage-percentage {
+                margin-left: 16px;
+                font-family: var(--primary-font-family);
+                font-style: normal;
+                font-weight: 600;
+                font-size: 23px;
+                text-align: right;
+                color: #696969;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .usage-container {
+        width: 90%;
+        height: auto;
+        margin: auto;
+
+        .list {
+            width: 100%;
+
+            .report {
+                width: 100%;
+                .usage-progress-bar {
+                    width: 45%;
+                }
+            }
+        }
+    }
+}

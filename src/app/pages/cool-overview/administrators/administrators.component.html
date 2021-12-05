@@ -1,0 +1,27 @@
+<div class="administrators-container">
+    <div class="administrators-header">
+        <span class="title skin">Administrators</span>
+    </div>
+    <div class="adminstrator-list-group">
+        <ng-container *ngIf="administrators$ | async"></ng-container>
+        <div class="list">
+            <div *ngFor="let administrator of administrators$ | async" class="administrator-group">
+                <img [src]="administrator.image" alt="Administrator image">
+                <span class="label-administrator skin">{{administrator.name}}</span>
+            </div>
+        </div>
+        <div class="next-button">
+            <button><img src="./assets/images/administrators/next-button.svg" alt=""></button>
+        </div>
+    </div>
+    <div class="invitation">
+        <form [formGroup]="inviteEmail" (ngSubmit)="sendInvite()">
+            <input [ngClass]="{'is-invalid': inviteEmail.get('email')?.valid !== true &&  inviteEmail.get('email')?.touched}" type="email"
+                class="form-control" formControlName="email" name="email" placeholder="Enter email" required="true">
+            <button type="submit">
+                <span class="button-text skin">Invite</span>
+                <mat-icon>navigate_next</mat-icon>
+            </button>
+        </form>
+    </div>
+</div>

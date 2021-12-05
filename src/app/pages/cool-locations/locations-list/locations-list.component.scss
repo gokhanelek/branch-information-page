@@ -1,0 +1,76 @@
+.locations-list-container {
+    display: flex;
+    justify-content: center;
+
+    .list {
+        width: 1151px;
+        height: 510px;
+        padding: 20px 30px 0 30px;
+        background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        border-radius: 28px;
+
+        .locations-table {
+            width: 100%;
+
+            thead {
+                width: 1091px;
+                margin-top: 13px;
+
+                th {
+                    position: sticky;
+                    top: 0;
+                    z-index: 1;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #aeaeae;
+                    width: 25%;
+                }
+
+                .products-th {
+                    text-align: end;
+                }
+            }
+
+            tbody {
+                width: 1091px;
+
+                tr {
+                    height: 58px;
+
+                    .location-name {
+                        display: flex;
+                        align-items: center;
+                        font-weight: normal;
+                        font-size: 14px;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 17px;
+                        }
+                    }
+
+                    .custom {
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #c7c7c7;
+                    }
+
+                    .products {
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+
+                        img {
+                            width: 45px;
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

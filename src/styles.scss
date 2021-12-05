@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Quicksand&display=swap");
+
+
+:root {
+    --primary-color: #404040;
+    --second-color: #fff;
+    --primary-font-family: "Lato";
+    --second-font-family: "Quicksand";
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    .skin {
+        font-family: var(--second-font-family);
+        font-style: normal;
+    }
+
+    .label-font {
+        font-family: var(--primary-font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 7.17776px;
+        line-height: 9px;
+    }
+
+    .primary-color {
+        color: var(--primary-color);
+    }
+
+    .second-color {
+        color: var(--second-color);
+    }
+
+    mat-progress-bar .mat-progress-bar-buffer {
+        background: #f1f1f1;
+    }
+
+    mat-progress-bar .mat-progress-bar-fill::after {
+        background: #197bbd;
+        border-radius: 10px;
+    }
+
+    .mat-list-base .mat-list-item .mat-list-item-content,
+    .mat-list-base .mat-list-option .mat-list-item-content {
+        padding: 0;
+    }
+}
+
+// TODO Flex-layout module kullanarak cihaz boyutuna responsive eklenebilir.

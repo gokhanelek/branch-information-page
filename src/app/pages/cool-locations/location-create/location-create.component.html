@@ -1,0 +1,70 @@
+<div class="location-create-container">
+    <div class="location-header">
+        <span>Location Create</span>
+    </div>
+    <form class="location-form" [formGroup]="locationForm" (ngSubmit)="createBranch()">
+        <div class="row">
+            <div class="col-sm-8 cl">
+                <div class="row">
+                    <div class="col-sm-12 cl">
+                        <mat-form-field class="fm-field" appearance="fill">
+                            <mat-label class="lb skin">Branch</mat-label>
+                            <input matInput placeholder="Enter Branch Name" id="branch" formControlName="name">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 cl">
+                        <mat-form-field class="fm-field" appearance="fill">
+                            <mat-label class="lb skin">Licenses</mat-label>
+                            <input matInput type="number" placeholder="Enter the number of licenses" id="branch"
+                                formControlName="licenses">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 cl">
+                        <mat-form-field class="fm-field" appearance="fill">
+                            <mat-label class="lb skin">Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="date">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 cl">
+                        <section class="modules" formGroupName="modules">
+                            <mat-checkbox class="module-box skin" name="exams" formControlName="exams">Exams
+                            </mat-checkbox>
+                            <mat-checkbox class="module-box skin" name="monitoring" formControlName="monitoring">
+                                Monitoring
+                            </mat-checkbox>
+                            <mat-checkbox class="module-box skin" name="applicationLibrary"
+                                formControlName="applicationLibrary">
+                                Application Library
+                            </mat-checkbox>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 cl">
+                <div class="file-upload-group">
+                    <div class="file-logo">
+                        <img [src]="preview" class="preview">
+                    </div>
+                    <input style="display: none;" class="file-input" type="file" accept=".png, .jpg, .jpeg, .svg"
+                        id="branch" (change)="selectFiles($event)" #fileInput>
+                    <button type="button" mat-flat-button color="primary" (click)="fileInput.click()">Upload</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group-btn">
+                <button type="submit" mat-raised-button color="primary" [disabled]="!locationForm.valid">Send</button>
+                <button mat-raised-button color="warn" [routerLink]="['/overview']"
+                    routerLinkActive="router-link-active">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

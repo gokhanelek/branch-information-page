@@ -1,0 +1,12 @@
+.cool-container {
+    width: 1500px;
+    height: 900px;
+    margin: auto;
+}
+
+@media (max-width: 480px) {
+    .cool-container {
+        width: 100%;
+        height: 100%;
+    }
+}

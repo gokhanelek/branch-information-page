@@ -1,0 +1,33 @@
+<div class="locations-list-container">
+    <div class="list">
+        <table class="locations-table">
+            <thead>
+                <tr>
+                    <th class="skin" [ngClass]="{'products-th':column === 'Products'}" *ngFor="let column  of displayedColumns">{{column}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let location of locations$ | async">
+                    <td scope="row" class="location-name skin">
+                        <img [src]="location.image" alt="" srcset="">
+                        {{location.name}}
+                    </td>
+                    <td scope="row" class="custom skin">
+                        {{location.licences}}
+                    </td>
+                    <td scope="row" class="custom skin">
+                        {{location.enrollmentDate | date: 'dd MMMM yyyy'}}
+                    </td>
+                    <td scope="row" class="products">
+                        <img *ngIf="location.products.exams===true" src="./assets/images/shared-img/exam-logo.png"
+                            alt="Exam logo">
+                        <img *ngIf="location.products.monitoring===true"
+                            src="./assets/images/shared-img/monitoring-logo.png" alt="Monitoring logo">
+                        <img *ngIf="location.products.applicationLibrary===true"
+                            src="./assets/images/shared-img/application-library-logo.png" alt="Application logo">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+.billing-container {
+    width: 600px;
+    height: 300px;
+    margin-top: 40px;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 28px;
+
+    .billing-header {
+        padding: 20px 30px;
+
+        .title {
+            font-weight: 500;
+            font-size: 20.1118px;
+            line-height: 25px;
+            color: #404040;
+        }
+    }
+
+    .billing-summary {
+        width: 540px;
+        height: 208px;
+        margin: auto;
+        overflow-y: scroll; /* Add the ability to scroll */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .summary-table {
+            width: 100%;
+            background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+
+            thead {
+                margin-top: 13px;
+
+                th {
+                    position: sticky;
+                    top: 0;
+                    z-index: 1;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #aeaeae;
+                }
+
+                .amount-th {
+                    text-align: right;
+                }
+            }
+
+            tbody {
+                border-top: none;
+                tr {
+                    td {
+                        height: 30px;
+                        text-align: left;
+                    }
+                    .service-td {
+                        display: flex;
+                        align-items: center;
+                        font-weight: normal;
+                        font-size: 14px;
+
+                        .form-check-input {
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 7px;
+                            border-radius: 6px;
+
+                            &:checked {
+                                background-color: #0d6efd;
+                                border: none;
+                            }
+
+                            &:focus {
+                                box-shadow: none;
+                            }
+                        }
+                    }
+
+                    .custom {
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #c7c7c7;
+                    }
+
+                    .amount {
+                        font-family: var(--primary-font-family);
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 17px;
+                        text-align: right;
+                        color: #404040;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .billing-container {
+        width: 100%;
+        margin-top: 10px;
+
+        .billing-summary {
+            width: 95%;
+        }
+    }
+}

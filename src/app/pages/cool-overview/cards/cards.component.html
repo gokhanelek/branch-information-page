@@ -1,0 +1,60 @@
+<div class="cards-container">
+    <div class="card-title">
+        <h1 class="skin primary-color">Cards</h1>
+    </div>
+    <ng-container *ngIf="card$ | async; let card">
+        <div class="row">
+            <div class="card-section col-sm-8">
+                <div class="overview-card">
+                    <div class="card-account-type">
+                        <span class="bank-name skin second-color">{{card?.primaryCard?.bank}}</span>
+                        <span class="primarycard-type">{{card?.primaryCard?.type}}</span>
+                    </div>
+                    <div class="card-number skin second-color">{{card?.primaryCard?.number}}</div>
+                    <div class="card-details">
+                        <div class="card-holder">
+                            <span class="label-font second-color">Card holder</span>
+                            <span class="detail-value second-color">{{card?.primaryCard?.name}}</span>
+                        </div>
+                        <div class="expire-date">
+                            <span class="label-font second-color">Expire date</span>
+                            <span class="detail-value second-color">{{card?.primaryCard?.expiry}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="expense-limit">
+                    <mat-progress-bar class="limit-bar" mode="determinate" [value]="exprenseLimitValue$ | async">
+                    </mat-progress-bar>
+                    <div class="expense-limit-detail">
+                        <span class="expense-limit-label skin">Expense limit</span>
+                        <span class="expense-limit-total">{{card?.expense?.current | currency
+                            }}/{{card?.expense?.limit | currency}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-section col-sm-4">
+                <div class="payment-details">
+                    <div class="payment-group">
+                        <span class="currency-balance-total">{{card?.balance?.current | currency }}</span>
+                        <span class="payment-label skin">Current balance</span>
+                    </div>
+                    <div class="payment-group">
+                        <span class="available-credit-total">{{card?.balance?.credit | currency }}</span>
+                        <span class="payment-label skin">Available credit</span>
+                    </div>
+                    <div class="payment-group">
+                        <span class="awaiting-provisions-total">{{card?.balance?.provisions | currency }}</span>
+                        <span class="payment-label skin">Awaiting provisions</span>
+                    </div>
+                    <div class="deactive-toggle">
+                        <label class="toggle" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
+                        <span class="skin"> Deacivate card</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
